@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Income and Expense</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="">
+
+<!-- Main Title -->
+   
+<!--  Income Part -->
+    <main class="container gap-2 mt-4 border rounded  pt-3 bg-light" style="max-width: 700px;">
+      <h1 class="text-warning display-6 text-center">
+        Monthly Income and Expense Form
+      </h1>
+      <form id="addForm" action="" class="d-flex gap-2">
+        <input
+        required
+          type="number"
+          placeholder="Enter your income..."
+          class="form-control rounded"
+          autofocus
+          width="400px"
+          id="income"
+        />
+        <button id="addBtn" type="submit" class="bg-warning rounded">Add</button>
+      </form>
+
+
+
+
+<!-- Expense Detail -->
+      <form id="expenseForm" class="row g-3 mt-4 border rounded m-0">
+        <div class="col-6">
+          <label for="expenseDetail" class="form-label">Expense Detail</label>
+          <input required
+            type="text"
+            placeholder="Grocery, bill, market, etc."
+            class="form-control"
+            id="expenseDetail"
+          />
+        </div>
+
+<!-- Date Info -->
+        <div class="col-6">
+          <label for="date" class="form-label">Date</label>
+          <input type="date" class="form-control" id="date" />
+        </div>
+
+<!-- Expense Amount -->
+        <div class="col-12">
+          <label for="expenseAmount" class="form-label">Expense Amount</label>
+          <input
+          required
+            type="number"
+            class="form-control"
+            id="expenseAmount"
+            placeholder="100£"
+          />
+        </div>
+        
+<!-- Save Button -->
+        <div class="col-12 text-center">
+          <button id="saveBtn" type="submit" class="btn btn-warning mb-2">Save</button>
+        </div>
+      </form>
+
+<!-- Expense Details List -->
+      <table id="expense-list" class="table table-bordered table-striped mt-4">
+        <thead>
+          <tr>
+            <th scope="col" class="w-25" id="dateTh">Date</th>
+            <th scope="col" class="w-50" id="expenseTh">Expense Detail</th>
+            <th scope="col" id="amountTh">Amount(£)</th>
+            <th scope="col" id="functionTh">Function</th>
+          </tr>
+        </thead>
+
+<!-- Variable Expense Row -->
+        <tbody id="expense-row">
+          <!-- <tr>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>Mark</td>
+    </tr> -->
+        </tbody>
+      </table>
+
+<!-- Cumulative Calculation / Result Table -->
+      <table
+        id="result-table"
+        class="table table-bordered table-striped w-50  ms-auto text-end mt-4 table-hover"
+
+      >
+        <tbody class="text-end">
+          <tr>
+            <th>Income:</th>
+            <td id="resultIncome">0</td>
+          </tr>
+          <tr>
+            <th>Expense:</th>
+            <td id="resultExpense">0</td>
+          </tr>
+          <tr>
+            <th>Balance:</th>
+            <td id="resultBalance">0</td>
+          </tr>
+        </tbody>
+      </table>
+
+<!-- Clear Button -->
+      <div class="col-12 text-center">
+        <button id="clearBtn" type="submit" class="btn btn-warning mt-4 mb-2">Clear</button>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
