@@ -11,7 +11,6 @@ https://umutplvn.github.io/Monthly-Income-and-Expense/
     <li>Area showing total revenue, total spending and remaining money</li>
     <li>Storing data in localstorage</li>
     <li>A button where the user can clear all income information and expense information when the month is over.</li>
-    <li>
 </ul>
 <a href="https://gider-takip.vercel.app/">Canlı Link</a>
 
