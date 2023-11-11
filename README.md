@@ -1,6 +1,5 @@
 # Monthly income and Expense 
 
-## Live at: https://umutplvn.github.io/Monthly-Income-and-Expense/
 
 ###### Beklenenler : 
 <ul>
